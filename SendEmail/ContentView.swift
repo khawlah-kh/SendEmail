@@ -8,7 +8,7 @@ import MessageUI
 import SwiftUI
 
 struct ContentView: View {
-
+    @StateObject var viewmodel = ViewModel()
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
 
@@ -17,9 +17,9 @@ struct ContentView: View {
         VStack {
             
             Button("Open Mail App") {
-                Script.sendEmail()
+                viewmodel.oppenMailApp()
             }
-            Spacer()
+            .padding(24)
             
             if MFMailComposeViewController.canSendMail() {
                 Button("Show mail view") {

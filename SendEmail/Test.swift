@@ -6,11 +6,10 @@
 //
 
 import Foundation
-import MessageUI
+import SwiftUI
 
-
-struct Script{
-    static func sendEmail(){
+final class ViewModel: ObservableObject{
+     func oppenMailApp(){
         let address = "yourAddress@test.com"
         let subject = "Send Email App"
 
@@ -32,46 +31,6 @@ struct Script{
         }
         UIApplication.shared.open(url) { success in
           // handle success or failure
-            switch success {
-            case true:
-                print("It is working 😍")
-            case false:
-                print("It is not working 😔")
-            }
         }
     }
-}
-
-//class SendEmail: NSObject {
-//    static func send() {
-//        let service = NSSharingService(named: NSSharingService.Name.composeEmail)!
-//        service.recipients = ["email@yourEmail.eu"]
-//        service.subject = "Email Subject"
-//
-//        service.perform(withItems: ["Email Content"])
-//    }
-//}
-
-
-class SendEmail: NSObject , MFMailComposeViewControllerDelegate{
-    
-    func sendEmail() {
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["khawlah1920@hotmail.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-//            mail.send
-            
-           // present(mail, animated: true)
-        } else {
-            // show failure alert
-        }
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true)
-    }
-    
-    
 }
