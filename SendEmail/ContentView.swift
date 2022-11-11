@@ -4,19 +4,41 @@
 //
 //  Created by Khawlah Khalid on 08/11/2022.
 //
-
+import MessageUI
 import SwiftUI
 
 struct ContentView: View {
+
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isShowingMailView = false
+
     var body: some View {
+
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            Button("Open Mail App") {
+                Script.sendEmail()
+            }
+            Spacer()
+            
+            if MFMailComposeViewController.canSendMail() {
+                Button("Show mail view") {
+                    self.isShowingMailView.toggle()
+                }
+            } else {
+                Text("Can't send emails from this device")
+            }
+            if result != nil {
+                Text("Result: \(String(describing: result))")
+                    .lineLimit(nil)
+            }
         }
-        .padding()
+        .sheet(isPresented: $isShowingMailView) {
+            MailView(isShowing: self.$isShowingMailView, result: self.$result)
+        }
+
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -11,6 +11,8 @@
 		DF9AEBD3291A9C400087E0E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEBD2291A9C400087E0E8 /* ContentView.swift */; };
 		DF9AEBD5291A9C410087E0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9AEBD4291A9C410087E0E8 /* Assets.xcassets */; };
 		DF9AEBD8291A9C410087E0E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9AEBD7291A9C410087E0E8 /* Preview Assets.xcassets */; };
+		DF9AEBDF291A9CB70087E0E8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEBDE291A9CB70087E0E8 /* SettingsView.swift */; };
+		DF9AEBE1291AA0990087E0E8 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AEBE0291AA0990087E0E8 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		DF9AEBD2291A9C400087E0E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF9AEBD4291A9C410087E0E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF9AEBD7291A9C410087E0E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF9AEBDE291A9CB70087E0E8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DF9AEBE0291AA0990087E0E8 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				DF9AEBD2291A9C400087E0E8 /* ContentView.swift */,
 				DF9AEBD4291A9C410087E0E8 /* Assets.xcassets */,
 				DF9AEBD6291A9C410087E0E8 /* Preview Content */,
+				DF9AEBDE291A9CB70087E0E8 /* SettingsView.swift */,
+				DF9AEBE0291AA0990087E0E8 /* Test.swift */,
 			);
 			path = SendEmail;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF9AEBDF291A9CB70087E0E8 /* SettingsView.swift in Sources */,
+				DF9AEBE1291AA0990087E0E8 /* Test.swift in Sources */,
 				DF9AEBD3291A9C400087E0E8 /* ContentView.swift in Sources */,
 				DF9AEBD1291A9C400087E0E8 /* SendEmailApp.swift in Sources */,
 			);
@@ -195,7 +203,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
